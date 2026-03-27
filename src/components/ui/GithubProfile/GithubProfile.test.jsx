@@ -19,7 +19,7 @@ describe("El componente GithubProfile", () => {
         expect(link).toHaveAttribute("rel", "noopener noreferrer");
     });
 
-    it("renderiza correctamente el SVG de GitHub sin propiedades (32x32)", () => {
+    it("renderiza correctamente el SVG de GitHub sin propiedades (medium)", () => {
         render(<GithubProfile />)
 
         const link = screen.getByRole("link", {
@@ -33,7 +33,7 @@ describe("El componente GithubProfile", () => {
         expect(svg).toHaveAttribute("aria-hidden", "true");
     });
 
-    it("renderiza correctamente el SVG de GitHub con propiedades (48x48)", () => {
+    it("renderiza correctamente el SVG de GitHub con propiedades (large)", () => {
         render(<GithubProfile size="large" />)
 
         const link = screen.getByRole("link", {
@@ -47,7 +47,21 @@ describe("El componente GithubProfile", () => {
         expect(svg).toHaveAttribute("aria-hidden", "true");
     });
 
-    it("puede focusear el link", async () => {
+    it("renderiza correctamente el SVG de GitHub con propiedades invalidas (medium)", () => {
+        render(<GithubProfile size="invalido" />)
+
+        const link = screen.getByRole("link", {
+            name: /perfil de github/i,
+        });
+
+        const svg = link.querySelector("svg");
+
+        expect(svg).toBeInTheDocument();
+        expect(svg).toHaveClass("w-8", "h-8", "block");
+        expect(svg).toHaveAttribute("aria-hidden", "true");
+    });
+
+    it("puede focusear el link", () => {
         render(<GithubProfile />);
 
         const link = screen.getByRole("link", {

@@ -3,9 +3,11 @@
 import { iconSizesMap } from "../../../utils/sizes.js";
 
 export default function LinkedinProfile({ size = "medium" }) {
+    const sizeClass = iconSizesMap[size] ?? iconSizesMap.medium;
+
     return (
         <a href="https://www.linkedin.com/in/fermin-sorzzoni-2792112b3/" aria-label="Perfil de LinkedIn" target="_blank" rel="noopener noreferrer">
-            <svg aria-hidden="true" className={iconSizesMap[size] + " block"} viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#e6e6e6">
+            <svg aria-hidden="true" className={sizeClass + " block"} viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#e6e6e6">
                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">

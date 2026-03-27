@@ -3,9 +3,11 @@
 import { iconSizesMap } from "../../../utils/sizes.js";
 
 export default function GithubProfile({ size = "medium" }) {
+    const sizeClass = iconSizesMap[size] ?? iconSizesMap.medium;
+
     return (
         <a href="https://github.com/fsorzzoni" aria-label="Perfil de GitHub" target="_blank" rel="noopener noreferrer">
-            <svg aria-hidden="true" className={iconSizesMap[size] + " block"} viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ffffff">
+            <svg aria-hidden="true" className={sizeClass + " block"} viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ffffff">
                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">
