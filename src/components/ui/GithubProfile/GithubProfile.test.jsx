@@ -1,29 +1,29 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
-import LinkedinProfile from "./LinkedinProfile.jsx";
+import GithubProfile from "./GithubProfile.jsx";
 
-describe("El componente LinkedinProfile", () => {
+describe("El componente GithubProfile", () => {
     beforeEach(() => {
-        render(<LinkedinProfile />)
+        render(<GithubProfile />)
     });
 
-    it("renderiza correctamente el link al perfil de LinkedIn", () => {
+    it("renderiza correctamente el link al perfil de GitHub", () => {
         const link = screen.getByRole("link", {
-            name: /perfil de linkedin/i,
+            name: /perfil de github/i,
         });
 
         expect(link).toBeInTheDocument();
         expect(link).toHaveAttribute(
             "href",
-            "https://www.linkedin.com/in/fermin-sorzzoni-2792112b3/"
+            "https://github.com/fsorzzoni"
         );
         expect(link).toHaveAttribute("target", "_blank");
         expect(link).toHaveAttribute("rel", "noopener noreferrer");
     });
 
-    it("renderiza correctamente el SVG de LinkedIn", () => {
+    it("renderiza correctamente el SVG de GitHub", () => {
         const link = screen.getByRole("link", {
-            name: /perfil de linkedin/i,
+            name: /perfil de github/i,
         });
 
         const svg = link.querySelector("svg");
