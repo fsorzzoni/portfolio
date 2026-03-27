@@ -29,12 +29,12 @@ describe("El componente LinkedinProfile", () => {
         const svg = link.querySelector("svg");
 
         expect(svg).toBeInTheDocument();
-        expect(svg).toHaveClass();
+        expect(svg).toHaveClass("w-8", "h-8", "block");
         expect(svg).toHaveAttribute("aria-hidden", "true");
     });
 
     it("renderiza correctamente el SVG de LinkedIn con propiedades (48x48)", () => {
-        render(<LinkedinProfile width={48} height={48} />)
+        render(<LinkedinProfile size="large" />)
 
         const link = screen.getByRole("link", {
             name: /perfil de linkedin/i,
@@ -43,7 +43,7 @@ describe("El componente LinkedinProfile", () => {
         const svg = link.querySelector("svg");
 
         expect(svg).toBeInTheDocument();
-        expect(svg).toHaveClass();
+        expect(svg).toHaveClass("w-12", "h-12", "block");
         expect(svg).toHaveAttribute("aria-hidden", "true");
     });
 
