@@ -1,4 +1,4 @@
-import { describe } from "vitest";
+import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 import LinkedinProfile from "./LinkedinProfile.jsx";
 
@@ -7,7 +7,7 @@ describe("LinkedinProfile component", () => {
         render(<LinkedinProfile />)
     });
 
-    it("correctly renders link to LinkedIn profile.", () => {
+    it("correctly renders link to LinkedIn profile", () => {
         const link = screen.getByRole("link", {
             name: /perfil de linkedin/i,
         });
@@ -17,9 +17,11 @@ describe("LinkedinProfile component", () => {
             "href",
             "https://www.linkedin.com/in/fermin-sorzzoni-2792112b3/"
         );
+        expect(link).toHaveAttribute("target", "_blank");
+        expect(link).toHaveAttribute("rel", "noopener noreferrer");
     });
 
-    it("correctly renders LinkedIn SVG.", () => {
+    it("correctly renders LinkedIn SVG", () => {
         const link = screen.getByRole("link", {
             name: /perfil de linkedin/i,
         });
