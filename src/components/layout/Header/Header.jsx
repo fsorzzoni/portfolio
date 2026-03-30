@@ -1,4 +1,5 @@
 import ProfilePhoto from "../../ui/ProfilePhoto/ProfilePhoto.jsx";
+import SocialProfile from "../../ui/SocialProfile/SocialProfile.jsx";
 
 export default function Header() {
     return (
