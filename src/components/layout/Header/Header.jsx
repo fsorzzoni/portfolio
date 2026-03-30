@@ -1,4 +1,4 @@
-import ProfilePhoto from "../ui/ProfilePhoto/ProfilePhoto";
+import ProfilePhoto from "../../ui/ProfilePhoto/ProfilePhoto.jsx";
 
 export default function Header() {
     return (
@@ -8,6 +8,10 @@ export default function Header() {
                 <h1>Fermin Sorzzoni</h1>
             </div>
 
+            <div>
+                <SocialProfile type="github" />
+                <SocialProfile type="linkedin" />
+            </div>
         </header>
     );
 }
