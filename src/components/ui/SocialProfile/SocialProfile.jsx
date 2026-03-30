@@ -1,21 +1,7 @@
 // GitHub and LinkedIn SVG by lawnchairlauncher - Collection: Lawnicons Line Brand Icons - License: Apache License
 
-import { iconSizesMap } from "../../../utils/sizes.js";
-import GithubIcon from "../GithubIcon/GithubIcon.jsx";
-import LinkedinIcon from "../LinkedinIcon/LinkedinIcon.jsx";
-
-const socialMap = {
-    github: { 
-        link: "https://github.com/fsorzzoni", 
-        label: "Perfil de GitHub",
-        icon: GithubIcon,
-    },
-    linkedin: { 
-        link: "https://www.linkedin.com/in/fermin-sorzzoni-2792112b3/", 
-        label: "Perfil de LinkedIn",
-        icon: LinkedinIcon,
-    },
-};
+import { iconSizesMap } from "../../../constants/sizes.js";
+import { socialMap } from "../../../constants/socials.js";
 
 export default function SocialProfile({ type = "github", size = "medium", link = null, ...props }) {
     const sizeClass = iconSizesMap[size] ?? iconSizesMap.medium;
