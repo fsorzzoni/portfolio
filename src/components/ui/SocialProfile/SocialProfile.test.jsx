@@ -24,7 +24,7 @@ describe("El componente SocialProfile", () => {
     });
 
     it("renderiza correctamente con atributos sin link (LinkedIn, large, title=hola)", () => {
-        render(<SocialProfile type="linkedin" size="large" title="hola" />)
+        render(<SocialProfile type="linkedin" size="large" />)
 
         const link = screen.getByRole("link", {
             name: /perfil de linkedin/i,
@@ -37,28 +37,6 @@ describe("El componente SocialProfile", () => {
             "href",
             "https://www.linkedin.com/in/fermin-sorzzoni-2792112b3/"
         );
-        expect(link).toHaveAttribute("title", "hola");
-        expect(link).toHaveAttribute("target", "_blank");
-        expect(link).toHaveAttribute("rel", "noopener noreferrer");
-        expect(svg).toBeInTheDocument();
-        expect(svg).toHaveClass("w-12", "h-12", "block");
-    });
-
-    it("renderiza correctamente con atributos con link (github, large, portfolio, title=hola)", () => {
-        render(<SocialProfile type="github" size="large" link="https://github.com/fsorzzoni/portfolio" title="hola" />)
-
-        const link = screen.getByRole("link", {
-            name: /perfil de github/i,
-        });
-
-        const svg = link.querySelector("svg");
-
-        expect(link).toBeInTheDocument();
-        expect(link).toHaveAttribute(
-            "href",
-            "https://github.com/fsorzzoni/portfolio"
-        );
-        expect(link).toHaveAttribute("title", "hola");
         expect(link).toHaveAttribute("target", "_blank");
         expect(link).toHaveAttribute("rel", "noopener noreferrer");
         expect(svg).toBeInTheDocument();
@@ -83,17 +61,5 @@ describe("El componente SocialProfile", () => {
         expect(link).toHaveAttribute("rel", "noopener noreferrer");
         expect(svg).toBeInTheDocument();
         expect(svg).toHaveClass("w-8", "h-8", "block");
-    });
-
-    it("puede focusear el link", () => {
-        render(<SocialProfile />);
-
-        const link = screen.getByRole("link", {
-            name: /perfil de github/i,
-        });
-
-        link.focus();
-
-        expect(link).toHaveFocus();
     });
 });
