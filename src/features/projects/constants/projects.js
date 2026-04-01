@@ -6,11 +6,11 @@ import sejuImg from "../../../assets/seju.jpeg";
 export const PROJECTS = {
     unitracker: {
         title: "Unitracker",
-        description: "",
-        techDescription: "",
+        description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum",
+        techDescription: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,",
         image: unitrackerImg,
-        githubUrl: "",
-        liveUrl: "",
+        githubUrl: "asd",
+        liveUrl: "asd",
     },
     portfolio: {
         title: "Portfolio",

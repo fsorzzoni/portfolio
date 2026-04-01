@@ -8,13 +8,19 @@ export default function ProjectCard({ project }) {
     if(!project) return null;
     const { title, description, techDescription, image, githubUrl, liveUrl } = project;
     return (
-        <div>
+        <div className="bg-background-600 rounded-lg shadow-lg shadow-background-900 overflow-hidden">
             <ProjectImg imgSrc={image} />
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <p>{techDescription}</p>
-            {liveUrl && <ExternalLink href={liveUrl} text="Ir a la App" icon={PROJECTS_ICONS.redirect} iconClassName={ICON_SIZES.medium} />}
-            {githubUrl && <ExternalLink href={githubUrl} label={"Repositorio de GitHub"} icon={ICONS.github} iconClassName={ICON_SIZES.medium} />}
+            <div className="p-6">
+                <div className="flex justify-between mb-3 items-center">
+                    <h3 className="text-xl">{title}</h3>
+                    <div className="flex gap-1">
+                        {liveUrl && <ExternalLink href={liveUrl} label="Ir a la App" icon={PROJECTS_ICONS.redirect} iconClassName={ICON_SIZES.medium} />}
+                        {githubUrl && <ExternalLink href={githubUrl} label="Repositorio de GitHub" icon={ICONS.github} iconClassName={ICON_SIZES.medium} />}
+                    </div>
+                </div>
+                <p className="mb-2">{description}</p>
+                <p>{techDescription}</p>
+            </div>
         </div>
     );
 }
