@@ -1,7 +1,7 @@
-import unitrackerImg from "../../../assets/unitracker.jpeg";
-import portfolioImg from "../../../assets/portfolio.jpeg";
-import ssooImg from "../../../assets/ssoo.jpeg";
-import sejuImg from "../../../assets/seju.jpeg";
+import unitrackerImg from "../../../assets/unitracker.png";
+import portfolioImg from "../../../assets/portfolio.png";
+import ssooImg from "../../../assets/ssoo.png";
+import sejuImg from "../../../assets/seju.png";
 
 export const PROJECTS = {
     unitracker: {

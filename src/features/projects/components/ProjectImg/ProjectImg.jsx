@@ -3,7 +3,7 @@ export default function ProjectImg({ imgSrc }) {
         <img
             src={imgSrc}
             alt=""
-            className="w-full aspect-video object-cover"
+            className="w-full aspect-video object-contain"
         />
     );
 }
