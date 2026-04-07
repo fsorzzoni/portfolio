@@ -7,7 +7,7 @@ export const PROJECTS = {
     unitracker: {
         title: "Unitracker",
         description: "Aplicación para realizar un seguimiento y obtener estadísticas de tu carrera universitaria.",
-        techDescription: "En desarrollo utilizando Next.js, Express y auth a través de JWT en el backend, y React y TailwindCSS en el frontend.",
+        techDescription: "En desarrollo utilizando Next.js, Express y auth a través de JWT en el backend, y React y TailwindCSS en el frontend. Base de datos con PostgreSQL y Prisma ORM.",
         image: unitrackerImg,
         githubUrl: "https://github.com/fsorzzoni/unitracker",
     },
