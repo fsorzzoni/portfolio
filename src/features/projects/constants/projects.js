@@ -6,8 +6,8 @@ import sejuImg from "../../../assets/seju.png";
 export const PROJECTS = {
     unitracker: {
         title: "Unitracker",
-        description: "Aplicación para realizar un seguimiento y obtener estadísticas de tu carrera universitaria.",
-        techDescription: "En desarrollo utilizando Next.js, Express y auth a través de JWT en el backend, y React y TailwindCSS en el frontend. Base de datos con PostgreSQL y Prisma ORM.",
+        description: "Aplicación fullstack desarrollada íntegramente de forma autónoma para el seguimiento y análisis del progreso académico universitario.",
+        techDescription: "Backend desarrollado como API REST con auth JWT implementada con Node.js, TypeScript, Express, Passport.js, Prisma ORM y PostgreSQL. Frontend en desarrollo con React y Tailwind CSS.",
         image: unitrackerImg,
         githubUrl: "https://github.com/ferminsorzzoni/unitracker",
     },
