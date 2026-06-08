@@ -7,9 +7,10 @@ export const PROJECTS = {
     unitracker: {
         title: "Unitracker",
         description: "Aplicación fullstack desarrollada íntegramente de forma autónoma para el seguimiento y análisis del progreso académico universitario.",
-        techDescription: "Backend desarrollado como API REST con auth JWT implementada con Node.js, TypeScript, Express, Passport.js, Prisma ORM y PostgreSQL. Frontend en desarrollo con React y Tailwind CSS.",
+        techDescription: "Backend desarrollado como API REST con auth JWT implementada con Node.js, TypeScript, Express, Passport.js, Prisma ORM y PostgreSQL. Frontend desarrollado con React, TypeScript, Vite, TanStack Query, Zustand, Tailwind CSS, entre otras.",
         image: unitrackerImg,
         githubUrl: "https://github.com/ferminsorzzoni/unitracker",
+        liveUrl: "https://unitracker.dev/",
     },
     portfolio: {
         title: "Portfolio",
@@ -31,5 +32,6 @@ export const PROJECTS = {
         description: "Software para gestionar inscripciones para la organización \"SeJu\"",
         techDescription: "Desarrollado en Go.",
         image: sejuImg,
+        liveUrl: "https://sejuturdera.com.ar/",
     }
 }
